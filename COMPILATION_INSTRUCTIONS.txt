@@ -1,0 +1,17 @@
+With ant builder:
+To compile the project: `ant compile`
+To clean the project: `ant clean`
+To run the project `ant` or `ant run`
+
+Manually:
+To compile a epecific file and it's dependencies: `javac -d classes -cp src src/tracks/singlePlayer/Test.java`
+To execute a java file: `java -cp classes src/tracks/singlePlayer/Test.java`
+
+
+Se intenta compilar el proyecto usando la segunda opción pero no es posible porque
+la llamada al controlador se hace sin implicar una dependencia(no se como) por lo
+tanto el fichero del agente no es compilado(entre otros).
+Para arreglarlo se opta por compilar el proyecto completo usando la herramienta
+de construcción ant. Al compilar no se mantiene la estructura de directorios puesto 
+se ha dicho explicitamente que la clase compilada se ubique en
+tracks.singlePlayer.myController.

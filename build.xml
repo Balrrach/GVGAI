@@ -1,0 +1,14 @@
+<project default="run">
+	<target name="compile">
+		<mkdir dir="classes"/>
+		<javac srcdir="src" destdir="classes"/>
+	</target>
+
+	<target name="clean">
+		<delete dir="classes"/>
+	</target>
+
+	<target name="run" depends="compile">
+		<java classpath="classes" classname="src/tracks/singlePlayer/Test.java" fork="true"></java>
+	</target>
+</project>
